@@ -1,5 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declarition -->
+<html lang="en"> <!-- Root Element -->
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Standard viewport (sets the width of the page to follow the screen-width of the device with intial zoom level) -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Horizontally centers the content */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Light gray background for visibility */
+        }
+        
+        .stacked-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo {
+            width:150px;
+        }
+        
+        .greeting {
+            color: #676167; /* this is the same grey/black used in the binoculars of the logo (R)*/
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: #ef5449; /* this will make the GPSense text the same color as the logo (R)*/
+        }
+        
+    </style>
 </head>
+    <body>
+        <div class="stacked-container"> 
+            <img src="images/logo.png" alt="GPSense Logo" class="logo">
+            <p class="greeting">
+                Ready to use your <span class="highlight">GPSense</span>? 
+
+               
+        </p>
+    </div>
+</body>
+
 </html>
