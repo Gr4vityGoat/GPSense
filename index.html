@@ -35,18 +35,31 @@
         .highlight {
             color: #ef5449; /* this will make the GPSense text the same color as the logo (R)*/
         }
-        
+
+        .login_button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ef5449; /* Matches the logo color (R)*/
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .login_button:hover {
+            background-color: #d0433f; /* Darker shade of red when hovered (R)*/
+        }
     </style>
 </head>
     <body>
         <div class="stacked-container"> 
             <img src="images/thelogo.png" alt="GPSense Logo" class="logo">
             <p class="greeting">
-                Ready to use your <span class="highlight">GPSense</span>? 
-
-               
-        </p>
-    </div>
-</body>
+                Ready to use your <span class="highlight">GPSense</span>?>  
+            </p>
+            <a href="login.html" class="login_button">Login</a>
+        </div>
+    </body>
 
 </html>
