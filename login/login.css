@@ -12,6 +12,7 @@ body {
 }
 .logo {
   width: 150px;
+  height: auto;
 }
 
 .login-form input[type="text"],
