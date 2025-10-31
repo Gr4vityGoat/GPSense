@@ -20,6 +20,7 @@ body {
 .logo {
     width: 150px;
     height: auto;
+    margin-bottom: -20px;
 }
 
 /* GPSense main title (larger) */
