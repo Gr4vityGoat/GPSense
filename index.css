@@ -6,7 +6,7 @@ body {
     justify-content: center; /* Horizontally centers the content */
     align-items: center; /* Vertically centers the content */
     height: 100vh; /* Sets height to 100% of the viewport (responsive) */
-    margin: 0; /* Romves default browser margin */
+    margin: 0; /* Removes default browser margin */
     background-color: #fff8fd; /* Light grayish magneta background for visibility */
 }
         
@@ -31,7 +31,7 @@ body {
 }
         
 .greeting {
-    color: #010035; /* Deep navy blue */
+    color: #001931; /* Deep navy blue */
     font-family: "Open Sans", sans-serif;
     font-size: 1.9em; /* 1.2 × parent’s font size (1.2 x default) */
     font-weight: bold;
@@ -64,17 +64,6 @@ body {
 }
 
 .start-button:hover {
-    background-color: #ab261d;
-    transform: scale(1.05);
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:active {
-    background-color:#8a1e17; /* Darker version of red */
-    color: white;
-    cursor: pointer;
-    transform: scale(0.98); /* Subtle pressed effect */
+  background-color: #ab261d;
+  transform: scale(1.05);
 }
