@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    display: flex; /* Enables Flexbox layout for easy centering */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Sets height to 100% of the viewport (responsive) */
+    margin: 0; /* Romves default browser margin */
+    background-color: #fff8fd; /* Light grayish magneta background for visibility */
+}
+        
+.stacked-container {
+    display: flex; /* Enables Flexbox for stacking content */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+        
+.logo {
+    width: 150px;
+}
+
+/* GPSense main title (larger) */
+.app-title {
+  font-size: 4em; /* Larger text size */
+  font-family: "Rammetto One", sans-serif;
+  color: #ab261d; /* Reddish logo tone */
+  margin: 0; /* Remove default heading margin */
+}
+        
+.greeting {
+    color: #010035; /* Deep navy blue */
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.9em; /* 1.2 × parent’s font size (1.2 x default) */
+    font-weight: bold;
+    margin-bottom: 110px; /* Spacing from text */
+    margin-top: -20px; /* Remove space above */
+}
+        
+.highlight { /* Highlighted "GP"S text */
+    color: #ab261d; /* Reddish tone matching logo */
+    font-family: "Rammetto One", sans-serif;
+}
+
+.highlight span { /* Highlighted "ense" text */
+    color: #001931; /* Deep navy blue */
+}
+
+.start-button {
+    position: relative;
+    background-color: #001931;
+    color: white; /* White text for contrast */
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em; /* 1.5 × parent’s font size (1.5 x default) */
+    font-weight: bold;
+    padding: 12px 200px; /* Comfortable size */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover animation */
+
+}
+
+.start-button:hover {
+  background-color: #ab261d;
+  transform: scale(1.05);
+}
