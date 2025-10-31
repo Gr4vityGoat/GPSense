@@ -26,17 +26,17 @@ if($row_cnt == 1){
     // direction of handle
     if($row['is_admin'] == '1'){ 
         $_SESSION['admin'] = '1';
-        header('Location: admin_home.php');
+        header('Location: admin_home.html');
         exit();
     }else {
         $_SESSION['admin'] = '0';
-        header("Location: home.php");
+        header("Location: home.html");
         exit();
     }
     
 
 }else{ // no match send back
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
     
 }
