@@ -1,6 +1,7 @@
 <?php
 session_start();  // use session_start() to start session first, make sure no html output (spaces,empty lines,html tags) before this line
-include('connect.php');
+include('mysqli_connect.php');
+
 // Pass form data
 $username = mysqli_real_escape_string($dbc, trim($_POST['username']));
 $password = mysqli_real_escape_string($dbc, trim($_POST['password']));
