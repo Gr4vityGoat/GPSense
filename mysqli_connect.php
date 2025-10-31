@@ -1,3 +1,12 @@
 <?php
-$dbc = mysqli_connect('localhost', 'infost490fa2507', 'GPSense!@#' , 'infost490fa2507_gpsense')
+$host = "localhost";
+$db_user = "infost490fa2507";
+$db_pass = "GPSense!@#";
+$db_name = "infost490fa2507_gpsense";
+
+$mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
+
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
 ?>
