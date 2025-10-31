@@ -22,16 +22,14 @@ if($row_cnt == 1){
     // retrieve database info
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     
-    
-    
     // direction of handle
     if($row['is_admin'] == '1'){ 
         $_SESSION['admin'] = '1';
-        header('Location: admin_home.html');
+        header('Location: admin_home.php');
         exit();
     }else {
         $_SESSION['admin'] = '0';
-        header("Location: home.html");
+        header("Location: home.php");
         exit();
     }
     
