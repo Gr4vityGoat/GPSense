@@ -1,11 +1,11 @@
 <?php
 session_start();
-include('/mysqli_connect.php');
+include('../mysqli_connect.php');
 
 // Get and sanitize input
-$username = mysqli_real_escape_string($dbc, trim($_POST['username']));
-$email = mysqli_real_escape_string($dbc, trim($_POST['email']));
-$password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+$username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
+$email = mysqli_real_escape_string($mysqli, trim($_POST['email']));
+$password = mysqli_real_escape_string($mysqli, trim($_POST['password']));
 
 // Basic validation
 if (empty($username) || empty($email) || empty($password)) {
@@ -14,25 +14,24 @@ if (empty($username) || empty($email) || empty($password)) {
 
 // Check if username or email already exists
 $checkQuery = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
-$checkResult = mysqli_query($dbc, $checkQuery);
+$checkResult = mysqli_query($mysqli, $checkQuery);
 
 if (mysqli_num_rows($checkResult) > 0) {
     die("Username or email already exists.");
 }
 
-// Hash password
-$hashedPassword = hash('sha256', $password);
+// Hash password using SHA2 256-bit
+$hashedPassword = mysqli_real_escape_string($mysqli, hash('sha256', $password));
 
 // Insert new user
-$insertQuery = "INSERT INTO users (username, email, password, is_admin) VALUES ('$username', '$email', '$hashedPassword', 0)";
-$insertResult = mysqli_query($dbc, $insertQuery);
+$insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+$insertResult = mysqli_query($mysqli, $insertQuery);
 
 if ($insertResult) {
     $_SESSION['username'] = $username;
-    $_SESSION['admin'] = '0';
-    header("Location: home.php");
+    header("Location: login.html");
     exit();
 } else {
-    die("Registration failed: " . mysqli_error($dbc));
+    die("Registration failed: " . mysqli_error($mysqli));
 }
 ?>
