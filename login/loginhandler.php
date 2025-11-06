@@ -12,16 +12,14 @@ $query = "SELECT * from users WHERE username = '$username' AND password = SHA2('
 // Run the query
 $result = mysqli_query($mysqli, $query);
 
-$row_cnt = mysqli_num_rows($result);
-
-//verify login
-if ($row_cnt == 1) {
-    // Set a session variable
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-
-    // retrieve database info
+if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+}
+    // Set a session variable
+    $_SESSION['user_id'] = $row['id']; // primary key from database
+    $_SESSION['username'] = $row['username'];
+
+    
 
     header("Location: ../index.php");
     exit();
