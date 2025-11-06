@@ -23,7 +23,7 @@ if ($row_cnt == 1) {
     // retrieve database info
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-    header("Location: ../index.html");
+    header("Location: ../index.php");
     exit();
 
 
