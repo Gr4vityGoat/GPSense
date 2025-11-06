@@ -4,7 +4,7 @@ require_once('mysqli_connect.php');
 
 if (!isset($_SESSION['user_id'])) {
     // User is not logged in, redirect to login page
-    header('Location: login.html');
+    header('Location: login.php');
     exit();
 }
 
@@ -18,20 +18,26 @@ $question = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>GPSense Home</title>
+    <title>GPSense Quiz</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <div class="question_box">
+        <?php if (!empty($question['photo_url'])): ?>
+            <img src="<?php echo htmlspecialchars($question['photo_url']); ?>" alt="Question Image" class="question_image"/>
+        <?php endif; ?>
+
         <h2><?php echo htmlspecialchars($question['question_text']); ?></h2>
         <form action="check_answer.php" method="post">
-            <?php foreach (['1', '2', '3', '4'] as $opt): ?>
+            <?php for ($i = 1; $i <= 4; $i++): ?>
+                <php if (!empty($question["option_$i"])): ?>
                 <?php if (!empty($question['option_' . strtolower($opt)])): ?>
                     <label>
-                        <input type="radio" name="answer" value="<?php echo $opt; ?>" required>
-                        <?php echo $opt . '. ' . htmlspecialchars($question['option_' . strtolower($opt)]); ?>
-                    </label>
+                        <input type="radio" name="answer" value="<?php echo $i; ?>" required>
+                        <?php echo "$i. " . htmlspecialchars($question["option_$1"]); ?>
+                    </label><br>
                 <?php endif; ?>
-            <?php endforeach; ?>
+            <?php endfor; ?>
             <input type="hidden" name="question_id" value="<?php echo $question['id']; ?>">
             <button type="submit">Submit Answer</button>
         </form>

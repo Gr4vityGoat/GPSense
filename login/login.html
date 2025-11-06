@@ -13,7 +13,7 @@
         <h2>Login to GPSense</h2>
         <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
             <p class="error-message">Invalid username or password. Please try again</p>
-        <?php endif; ?>
+        <?php endif; ?> 
         <form action="loginhandler.php" method="POST" class="login-form">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
