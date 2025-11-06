@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) == 1) {
 
 
 } else { // no match send back
-    header("Location: login.html");
+    header("Location: login.html?error=1");
     exit();
 
 }
