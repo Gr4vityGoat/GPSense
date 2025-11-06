@@ -14,7 +14,7 @@ $result = mysqli_query($mysqli, $query);
 
 if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-}
+
     // Set a session variable
     $_SESSION['user_id'] = $row['id']; // primary key from database
     $_SESSION['username'] = $row['username'];
