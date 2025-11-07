@@ -159,16 +159,14 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             });
             
             // Show feedback
-            feedback.textContent = isCorrect  
-                 ? `✅ Correct! ${currentQuestion.answer_reason}` 
-                 : `❌ Incorrect. ${currentQuestion.answer_reason}`;
+            feedback.textContent = isCorrect ? 
+                '✅ Correct!' : 
+                `❌ Incorrect. ${currentQuestion.answer_reason}`;
             feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
             feedback.style.display = 'block';
             
-            // Show next button
-            if (isCorrect) {
-                nextButton.style.display = 'block';
-            }
+            // Show next button regardless of answer correctness
+            nextButton.style.display = 'block';
         }
         
         // Event Listeners
