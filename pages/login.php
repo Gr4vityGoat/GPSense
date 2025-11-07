@@ -30,7 +30,7 @@
             <button type="submit">Login</button>
         </form>
 
-        <a href="/pages/register.html" class="register-link">Don't have an account? Create one!</a>
+        <a href="/pages/register.php" class="register-link">Don't have an account? Create one!</a>
     </div>
 
 </html>
