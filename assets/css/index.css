@@ -18,7 +18,7 @@ body {
 }
         
 .logo {
-    width: 150px;
+    width: 250px;
     height: auto;
     margin-bottom: -20px;
 }
@@ -62,7 +62,6 @@ body {
     border-radius: 10px; /* Rounded edges */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover animation */
-
 }
 
 .start-button:hover {
