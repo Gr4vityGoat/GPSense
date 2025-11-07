@@ -30,7 +30,12 @@ if (isset($_SESSION['update_success'])) {
     unset($_SESSION['update_success']);
 }
 ?>
-  <h2><span class="icon">👤</span>Account Info</h2>
+  <h1><span class="icon">👤</span>Account Settings</h1>
+    <img src="/assets/images/blank_profile.png" alt="Profile Picture" class="profile-picture">
+  <?php
+  // Welcome message to user
+  echo "<h2>".$_SESSION['username'] ."</h2>";
+  ?>
   <form action="update_account.php" method="POST">
     <label>Username:</label>
     <input type="text" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required><br>
