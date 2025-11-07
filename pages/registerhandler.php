@@ -1,6 +1,13 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
-include('/../includes/mysqli_connect.php');
+
+// Debug: Print the attempted include path
+$includePath = __DIR__ . '/../includes/mysqli_connect.php';
+echo "Trying to include: " . $includePath . "<br>";
+
+include $includePath;
 
 // Get and sanitize input
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
@@ -29,7 +36,7 @@ $insertResult = mysqli_query($mysqli, $insertQuery);
 
 if ($insertResult) {
     $_SESSION['username'] = $username;
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 } else {
     die("Registration failed: " . mysqli_error($mysqli));
