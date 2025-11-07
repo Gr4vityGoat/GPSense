@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('mysqli_connect.php');
+require_once('../includes/mysqli_connect.php');
 
 if (!isset($_SESSION['user_id'])) {
     // User is not logged in, redirect to login page
