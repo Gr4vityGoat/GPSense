@@ -14,6 +14,8 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 
 $_SESSION['account_deleted'] = true;
+session_destroy();
+
 header("Location: register.html");
 exit;
 ?>
