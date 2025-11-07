@@ -80,7 +80,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             <button type="submit">My Account</button>
         </form>
     </div>
-    <div class="quiz-container">
+    <div class="question-box">
         <img id="questionImage" src="" alt="Question Image" class="question-image" style="display: none;">
         <div id="questionText" class="question-text"></div>
         <div id="options" class="options-container"></div>
