@@ -22,7 +22,7 @@ body {
 
 .question-box h2 {
       color: #14213d;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Agrandir', sans-serif;
 }
 
 .question-box form {
@@ -33,6 +33,7 @@ body {
       display: block;
       margin: 10px 0;
       text-align: left;
+      font-family: 'Poppins', sans-serif;
 }
 
 .question-box button {
@@ -61,7 +62,11 @@ body {
 .navigation_buttons button {
       margin: 0 10px;
       padding: 10px 20px;
-      background-color: #824e82;
+      background-color: #4f7cac;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 9px;
+      border-color: #729ecd;
       color: white;
       cursor: pointer;
 }
@@ -89,6 +94,7 @@ body {
       display: block;
       margin: 10px 0;
       text-align: left;
+      font-family: 'Poppins', sans-serif;
 }
 
 .question_box button {
