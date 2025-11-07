@@ -36,15 +36,15 @@ body {
       font-family: 'Poppins', sans-serif;
 }
 
-.question-box button {
+.question_box button {
       margin-top: 15px;
       padding: 10px 20px;
-      background-color: #ab261d;
+      background-color: #14213d;
       color: #efe9f4;
       border-style: solid;
       border-width: 5px;
       border-radius: 9px;
-      border-color: #d0433f;
+      border-color: #263d6f;
       font-weight: bold;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
