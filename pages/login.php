@@ -21,7 +21,7 @@
         <?php endif; ?> 
 
         <!-- Login Form -->
-        <form action="/pages/loginhandler.php" method="POST" class="login-form">
+        <form action="/pages/loginhandler.php" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
@@ -29,6 +29,7 @@
 
         <a href="/pages/register.html" class="register-link">Don't have an account? Create one!</a>
     </div>
-<?php include('/includes/footer.php') ?>
+    <!-- Footer Include -->
+    <?php include('/includes/footer.php') ?>
 </body>
 </html>

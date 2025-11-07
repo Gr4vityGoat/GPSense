@@ -12,8 +12,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* Login box styling */
-.login-container {
+/* Register box styling */
+.register-container {
   background-color: #fff;
   border: 1px solid #1d5e69; /* Thin border with brand color */
   padding: 30px;
@@ -23,27 +23,20 @@ body {
   text-align: center;
 }
 
-.login-container img {
+.register-container img {
   width: 150px;
   height: auto;
   margin-bottom: -20px;
 }
 
-.login-container h2 {
+.register-container h2 {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 20px;
   color: #001931;;
 }
 
-/* Error message */
-.error-message {
-  font-family: "Open Sans", sans-serif;
-  color: red;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
 input[type="text"],
+input[type="email"],
 input[type="password"] {
   width: 100%;
   max-width: 260px; /* Prevents full stretch */
@@ -65,7 +58,7 @@ input[type="password"] {
     font-family: "Rammetto One", sans-serif;
 }
 
-/* Submit button */
+/* Register button */
 button {
   width: 100%;
   background-color: #001931;
@@ -88,7 +81,7 @@ button:hover {
   text-decoration: none;
 }
 
-.register-link {
+.login-link {
   white-space: nowrap; /* Prevents line breaks */
   margin-top: 15px;
   display: block;
@@ -97,8 +90,8 @@ button:hover {
   font-weight: bold;
 }
 
-.register-link:hover,
-.register-link:visited {
+.login-link:hover,
+.login-link:visited {
   text-decoration: underline;
   color: #ab261d;
 }
