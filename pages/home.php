@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('mysqli_connect.php');
+require_once(__DIR__ . '/../includes/mysqli_connect.php');
 
 if (!isset($_SESSION['user_id'])) {
     // User is not logged in, redirect to login page
@@ -15,16 +15,19 @@ $question = $result->fetch_assoc();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPSense Quiz</title>
     <link rel="stylesheet" href="/assets/css/home.css">
 </head>
+
 <body>
     <div class="question_box">
         <?php if (!empty($question['photo_url'])): ?>
-            <img src="<?php echo htmlspecialchars($question['photo_url']); ?>" alt="Question Image" class="question_image"/>
+            <img src="<?php echo htmlspecialchars($question['photo_url']); ?>" alt="Question Image"
+                class="question_image" />
         <?php endif; ?>
 
         <h2><?php echo htmlspecialchars($question['question_text']); ?></h2>
@@ -42,4 +45,5 @@ $question = $result->fetch_assoc();
         </form>
     </div>
 </body>
+
 </html>
