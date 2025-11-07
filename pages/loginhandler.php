@@ -1,6 +1,6 @@
 <?php # Handle login script
 session_start();  // Start session first
-include(__DIR__ . '/../includes/mysqli_connect.php');
+include('/../includes/mysqli_connect.php');
 
 # Pass form data
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
@@ -16,14 +16,14 @@ $row_count = mysqli_num_rows($result);
 
 #If a match found
 if ($row_count == 1) {
-    $row =  mysqli_fetch_array($result,MYSQLI_ASSOC); //fetch user's row from database
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC); //fetch user's row from database
 
     # Set up a session variable
     $_SESSION['user_id'] = $row['id']; // primary key from database used to define a session var
-    
+
     # After we set up a session var, and before redirect
     $_SESSION['username'] = $row['username']; //set up 2nd session var set -> can be accessed later
-    
+
 
     header("Location: pages/home.html");
     exit();

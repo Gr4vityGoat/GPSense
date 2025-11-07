@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../mysqli_connect.php');
+include('/../includes/mysqli_connect.php');
 
 // Get and sanitize input
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
