@@ -25,7 +25,7 @@ if ($row_count == 1) {
     $_SESSION['username'] = $row['username']; //set up 2nd session var set -> can be accessed later
     
 
-    header("Location: pages/home.html");
+    header("Location: /pages/home.php");
     exit();
 } else { // no match send back
     header("Location: /pages/login.php?error=1");
