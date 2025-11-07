@@ -13,8 +13,9 @@ $stmt = $mysqli->prepare($query);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 
+$_SESSION['account_deleted'] = true;
 session_destroy();
-echo "Account deleted :(";
+
 header("Location: register.html");
 exit;
 ?>
