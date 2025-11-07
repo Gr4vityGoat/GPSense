@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 $query = "SELECT username, email FROM users WHERE id = ?";
-$stmt = $dbc->prepare($query);
+$stmt = $mysqli->prepare($query);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
