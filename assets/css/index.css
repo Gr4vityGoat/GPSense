@@ -7,7 +7,7 @@ body {
     align-items: center; /* Vertically centers the content */
     height: 100vh; /* Sets height to 100% of the viewport (responsive) */
     margin: 0; /* Removes default browser margin */
-    background-color: #fff8fd; /* Light grayish magneta background for visibility */
+    background-color: #efe9f4; /* Light grayish magneta background for visibility */
 }
         
 .stacked-container {
