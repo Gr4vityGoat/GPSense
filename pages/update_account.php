@@ -24,7 +24,8 @@ if (!empty($password)) {
 
 $stmt->execute();
 $_SESSION['username'] = $username; // update session
-echo "Updated successfully!";
+$_SESSION['update_success'] = true;
+
 header("Location: account.php");
 exit;
-?>
+
