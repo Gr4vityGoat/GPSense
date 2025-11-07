@@ -31,10 +31,9 @@ $question = $result->fetch_assoc();
         <form action="check_answer.php" method="post">
             <?php for ($i = 1; $i <= 4; $i++): ?>
                 <?php if (!empty($question["option_$i"])): ?>
-                <?php if (!empty($question['option_' . strtolower($opt)])): ?>
                     <label>
                         <input type="radio" name="answer" value="<?php echo $i; ?>" required>
-                        <?php echo "$i. " . htmlspecialchars($question["option_$1"]); ?>
+                        <?php echo "$i. " . htmlspecialchars($question["option_$i"]); ?>
                     </label><br>
                 <?php endif; ?>
             <?php endfor; ?>
