@@ -1,6 +1,7 @@
 <?php # Handle login script
 session_start();  // Start session first
-include('/../includes/mysqli_connect.php');
+// include the DB connection using __DIR__ so the path resolves relative to this file
+include __DIR__ . '/../includes/mysqli_connect.php';
 
 # Pass form data
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
