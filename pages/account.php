@@ -48,5 +48,8 @@ if (isset($_SESSION['update_success'])) {
   <form action="delete_account.php" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This cannot be undone.');">
     <button type="submit" name="confirm_delete" value="yes" style="color:red;">Delete My Account</button>
   </form>
+  <form action="home.php" method="GET" style="margin-top:20px;">
+    <button type="submit">Back to Home</button>
+  </form>
 </body>
 </html>

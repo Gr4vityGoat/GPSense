@@ -1,3 +1,11 @@
+<?php
+session_start();
+$deleted = false;
+if (isset($_SESSION['account_deleted'])) {
+    $deleted = true;
+    unset($_SESSION['account_deleted']);
+}
+?>
 <!DOCTYPE html> <!-- Declarition -->
 <html lang="en"> <!-- Root Element -->
 
@@ -17,6 +25,11 @@
         <h2>Create your
             <span class="highlight">GPS<span>ense</span></span> Account!
         </h2>
+        <?php if ($deleted): ?>
+            <div style="background-color:#ffe0e0; border:1px solid #aa0000; padding:10px; margin-bottom:15px;">
+                Your account has been deleted successfully 
+                </div>
+            <?php endif; ?>
 
         <!-- Register Form -->
         <form action="/pages/registerhandler.php" method="POST">

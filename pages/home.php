@@ -10,8 +10,19 @@ if (!isset($_SESSION['user_id'])) {
 
 // Get initial random question
 $query = "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
-$result = mysqli_query($mysqli, $query);
-$question = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$result = $mysqli->query($query);
+
+if (!$result) {
+    error_log("Query failed: " . $mysqli->error);
+    die("Query failed: " . $mysqli->error);
+}
+
+$question = $result->fetch_assoc();
+
+if (!$question) {
+    error_log("No questions found in database");
+    die("No questions found in database");
+}
 
 // Return question data as JSON if it's an AJAX request
 if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
@@ -69,7 +80,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             <button type="submit">My Account</button>
         </form>
     </div>
-    <div class="quiz-container">
+    <div class="question-box">
         <img id="questionImage" src="" alt="Question Image" class="question-image" style="display: none;">
         <div id="questionText" class="question-text"></div>
         <div id="options" class="options-container"></div>
@@ -83,7 +94,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         // Function to load a new question
         async function loadQuestion() {
             try {
-                const response = await fetch('final.php?action=get_question');
+                const response = await fetch('home.php?action=get_question');
                 currentQuestion = await response.json();
                 
                 // Update the UI with the new question
