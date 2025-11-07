@@ -12,26 +12,23 @@ $query = "SELECT * from users WHERE username = '$username' AND password = SHA2('
 # Run the query
 $result = mysqli_query($mysqli, $query);
 
-$row_count = mysqli_num_rows($results)
+$row_count = mysqli_num_rows($result)
 
 #If a match found
 if ($row_count == 1) {
+    $row =  mysqli_fetch_array($result,MYSQLI_ASSOC); //fetch user's row from database
 
     # Set up a session variable
     $_SESSION['user_id'] = $row['id']; // primary key from database used to define a session var
-    $row =  mysqli_fetch_array($result,MYSQLI_ASSOC); //fetch user's row from database
     
     # After we set up a session var, and before redirect
     $_SESSION['username'] = $row['username']; //set up 2nd session var set -> can be accessed later
     
 
-    header("Location: ../.html");
+    header("Location: pages/home.html");
     exit();
-
-
 } else { // no match send back
-    header("Location: login.html?error=1");
+    header("Location: /pages/login.php?error=1");
     exit();
-
 }
 ?>

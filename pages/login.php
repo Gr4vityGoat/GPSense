@@ -16,7 +16,7 @@
         </h2>
 
         <!-- Show error if login fails -->
-        <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
+        <?php if (!empty($_GET['error']) && $_GET['error'] == 1): ?>
             <p class="error-message">Invalid username or password. Please try again</p>
         <?php endif; ?> 
 
@@ -29,8 +29,6 @@
 
         <a href="/pages/register.html" class="register-link">Don't have an account? Create one!</a>
     </div>
+<?php include('/includes/footer.php') ?>
 </body>
-<?php
-    include('/includes/footer.php')
-?>
 </html>
