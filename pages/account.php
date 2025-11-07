@@ -31,7 +31,7 @@ if (isset($_SESSION['update_success'])) {
 }
 ?>
   <h1><span class="icon">👤</span>Account Settings</h1>
-    <img src="/assets/images/blank_profile.png" alt="Profile Picture" class="profile-picture">
+    <img src="/assets/images/blank_profile.jpeg" alt="Profile Picture" class="profile-picture">
   <?php
   // Welcome message to user
   echo "<h2>".$_SESSION['username'] ."</h2>";
