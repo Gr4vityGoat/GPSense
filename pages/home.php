@@ -24,6 +24,14 @@ $question = $result->fetch_assoc();
 </head>
 
 <body>
+    <div class="navigation_buttons">
+        <form action="home.php" method="get" style="display:inline;">
+            <button type="submit">Take Quiz</button>
+        </form>
+        <form action="account.php" method="get" style="display:inline;">
+            <button type="submit">My Account</button>
+        </form>
+    </div>
     <div class="question_box">
         <?php if (!empty($question['photo_url'])): ?>
             <img src="<?php echo htmlspecialchars($question['photo_url']); ?>" alt="Question Image"
