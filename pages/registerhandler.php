@@ -1,13 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 session_start();
-
-// Debug: Print the attempted include path
-$includePath = __DIR__ . '/../includes/mysqli_connect.php';
-echo "Trying to include: " . $includePath . "<br>";
-
-include $includePath;
+include __DIR__ . '/../includes/mysqli_connect.php';
 
 // Get and sanitize input
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
@@ -35,6 +28,7 @@ $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username
 $insertResult = mysqli_query($mysqli, $insertQuery);
 
 if ($insertResult) {
+    $_SESSION['username'] = $username;
     header("Location: login.php");
     exit();
 } else {
