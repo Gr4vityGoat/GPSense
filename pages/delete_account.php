@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_POST['confirm_delete'] !== 'yes') {
 
 $user_id = $_SESSION['user_id'];
 $query = "DELETE FROM users WHERE id = ?";
-$stmt = $dbc->prepare($query);
+$stmt = $mysqli->prepare($query);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 
