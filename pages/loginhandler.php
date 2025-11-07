@@ -1,6 +1,6 @@
 <?php # Handle login script
 session_start();  // Start session first
-include('../mysqli_connect.php');
+include('/includes/mysqli_connect.php');
 
 # Pass form data
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
@@ -12,7 +12,7 @@ $query = "SELECT * from users WHERE username = '$username' AND password = SHA2('
 # Run the query
 $result = mysqli_query($mysqli, $query);
 
-$row_count = mysqli_num_rows($result)
+$row_count = mysqli_num_rows($result);
 
 #If a match found
 if ($row_count == 1) {
