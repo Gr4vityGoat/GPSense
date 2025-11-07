@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "mysqli_connect.php";
+require_once ('../includes/mysqli_connect.php');
 
 if (!isset($_SESSION['user_id']) || $_POST['confirm_delete'] !== 'yes') {
     header("Location: account.php");
