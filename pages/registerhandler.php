@@ -35,7 +35,6 @@ $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username
 $insertResult = mysqli_query($mysqli, $insertQuery);
 
 if ($insertResult) {
-    $_SESSION['username'] = $username;
     header("Location: login.php");
     exit();
 } else {
