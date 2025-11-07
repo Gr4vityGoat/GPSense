@@ -8,7 +8,7 @@ body {
       margin: 0;
 }
 
-.question-box {
+.option {
       background-color: #b8d8d8;
       padding: 30px;
       border-style: solid;
@@ -20,7 +20,7 @@ body {
       text-align: center;
 }
 
-.question-box h2 {
+.option h2 {
       color: #14213d;
       font-family: 'Agrandir', sans-serif;
 }
@@ -29,7 +29,7 @@ body {
       margin-top: 20px;
 }
 
-.question-box label {
+.option label {
       display: block;
       margin: 10px 0;
       text-align: left;
