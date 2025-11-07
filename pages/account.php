@@ -22,7 +22,7 @@ $user = $result->fetch_assoc();
   <title>Account Settings</title>
 </head>
 <body>
-  <h2>Update Account Info</h2>
+  <h2><span class="icon">👤</span>Account Info</h2>
   <form action="update_account.php" method="POST">
     <label>Username:</label>
     <input type="text" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required><br>
