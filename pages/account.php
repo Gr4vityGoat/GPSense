@@ -22,6 +22,14 @@ $user = $result->fetch_assoc();
   <title>Account Settings</title>
 </head>
 <body>
+<?php
+if (isset($_SESSION['update_success'])) {
+    echo "<div style='background-color: #e0ffe0; border:1px solid #00aa00; padding:10px; margin-bottom:15px;'>
+      Account updated successfully!
+    </div>";
+    unset($_SESSION['update_success']);
+}
+?>
   <h2>Update Account Info</h2>
   <form action="update_account.php" method="POST">
     <label>Username:</label>
