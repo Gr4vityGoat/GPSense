@@ -15,7 +15,7 @@
             <span class="highlight">GPS<span>ense</span></span>
         </h2>
 
-        <!-- Show rttor if login fails -->
+        <!-- Show error if login fails -->
         <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
             <p class="error-message">Invalid username or password. Please try again</p>
         <?php endif; ?> 
@@ -26,7 +26,7 @@
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-        
+
         <a href="/pages/register.html" class="register-link">Don't have an account? Create one!</a>
     </div>
 </body>
