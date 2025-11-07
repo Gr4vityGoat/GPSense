@@ -71,14 +71,14 @@ body {
       border-style: solid;
       border-color: #c7f0f0;
       border-width: 5px;
-      border-radius: 15px;
+      border-radius: 20px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
       width: 400px;
       text-align: center;
 }
 .question_box h2 {
       color: #14213d;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Agrandir', sans-serif;
 }
 
 .question_box form {
