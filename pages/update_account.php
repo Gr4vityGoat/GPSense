@@ -8,17 +8,17 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
-$username = mysqli_real_escape_string($dbc, $_POST['username']);
-$email = mysqli_real_escape_string($dbc, $_POST['email']);
+$username = mysqli_real_escape_string($mysqli, $_POST['username']);
+$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 $password = trim($_POST['password']);
 
 if (!empty($password)) {
     $query = "UPDATE users SET username = ?, email = ?, password = SHA2(?, 256) WHERE id = ?";
-    $stmt = $dbc->prepare($query);
+    $stmt = $mysqli->prepare($query);
     $stmt->bind_param("sssi", $username, $email, $password, $user_id);
 } else {
     $query = "UPDATE users SET username = ?, email = ? WHERE id = ?";
-    $stmt = $dbc->prepare($query);
+    $stmt = $mysqli->prepare($query);
     $stmt->bind_param("ssi", $username, $email, $user_id);
 }
 
