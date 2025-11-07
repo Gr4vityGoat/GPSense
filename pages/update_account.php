@@ -28,4 +28,4 @@ $_SESSION['update_success'] = true;
 
 header("Location: account.php");
 exit;
-?>
+
