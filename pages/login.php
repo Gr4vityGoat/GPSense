@@ -32,5 +32,7 @@
 
         <a href="/pages/register.php" class="register-link">Don't have an account? Create one!</a>
     </div>
-
+    <!-- Footer Include -->
+    <?php include(__DIR__ . '/../includes/footer.php') ?>
+</body>
 </html>
