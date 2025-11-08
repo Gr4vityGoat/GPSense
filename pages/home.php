@@ -47,6 +47,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         .option {
             cursor: pointer;
             transition: all 0.3s ease;
+            color: #14213d; 
             font-family: 'Poppins', sans-serif;
             width: 50%; 
             margin: 0 auto;
