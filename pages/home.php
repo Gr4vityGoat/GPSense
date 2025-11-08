@@ -26,6 +26,7 @@ if (!$question) {
 
 // Return question data as JSON if it's an AJAX request
 if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
+    $question['photo_url'] = trim($question['photo_url'] ?? '');
     header('Content-Type: application/json');
     echo json_encode($question);
     exit;
