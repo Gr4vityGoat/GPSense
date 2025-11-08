@@ -99,7 +99,7 @@ body {
 
 .navigation_buttons button:hover {
   background-color: #729ecd;
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .question_box {
