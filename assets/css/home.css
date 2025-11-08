@@ -14,10 +14,10 @@ body {
       gap: 30px;
 }
 .option {
-      background-color: #b8d8d8;
+      background-color: #14213d;
       padding: 15px 20px;
       border-style: solid;
-      border-color: #c7f0f0;
+      border-color: #263d6f;
       border-width: 3px;
       border-radius: 10px;
       margin: 10px 0;
@@ -30,7 +30,7 @@ body {
       text-align: center;
 }
 .option:hover {
-      background-color: #a6cccc;
+      background-color: #263d6f;
       transform: scale(1.02);
 }
 
