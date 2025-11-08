@@ -74,12 +74,12 @@ body {
 
 .question-box button {
       margin-top: 30px;
-      background-color: #14213d;
-      color: #efe9f4;
+      background-color: #b8d8d8;
+      color: #14213d;
       border-style: solid;
       border-width: 5px;
       border-radius: 9px;
-      border-color: #263d6f;
+      border-color: #c7f0f0;
       font-weight: bold;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
@@ -89,7 +89,7 @@ body {
 }
 
 .question-box button:hover {
-      background-color: #263d6f;
+      background-color: #c7f0f0;
 }
 
 /* Create a top header area */
