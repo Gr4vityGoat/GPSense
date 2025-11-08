@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; /* spaces each option evenly */
+  gap: 30px !important; /* spaces each option evenly */
 }
 
 .option h2 {
