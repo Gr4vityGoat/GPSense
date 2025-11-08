@@ -122,3 +122,14 @@ body {
     border-radius: 10px;     /* matches style */
     margin-bottom: 15px;     /* space between image and text */
 }
+/* Strong, safe defaults for the question image */
+#questionImage.question-image {
+  display: block;           /* ensure block so margins work */
+  width: auto !important;   /* don't force full width */
+  max-width: 320px !important;   /* limit width */
+  max-height: 320px !important;  /* limit height so very tall images are constrained */
+  height: auto !important;       /* preserve aspect ratio */
+  object-fit: contain;      /* letterbox if aspect ratio differs */
+  margin: 0 auto 15px;      /* center + gap under image */
+  border-radius: 10px;
+}
