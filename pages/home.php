@@ -73,6 +73,9 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         .next-button {
             display: none;
         }
+        .navigation_buttons:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
