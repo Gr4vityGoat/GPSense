@@ -103,7 +103,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
                 // Handle the image
                 const imageElement = document.getElementById('questionImage');
                 if (currentQuestion.photo_url) {
-                    imageElement.src = '/' + currentQuestion.photo_url;
+                    imageElement.src = '/assets/' + currentQuestion.photo_url;
                     imageElement.style.display = 'block';
                 } else {
                     imageElement.style.display = 'none';
@@ -160,15 +160,13 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             
             // Show feedback
             feedback.textContent = isCorrect ? 
-                 `✅ Correct!' ${currentQuestion.answer_reason}` :
-                 `❌ Incorrect. ${currentQuestion.answer_reason}`;
+                '✅ Correct!' : 
+                `❌ Incorrect. ${currentQuestion.answer_reason}`;
             feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
             feedback.style.display = 'block';
             
-            // Show next button
-            if (isCorrect) {
-                nextButton.style.display = 'block';
-            }
+            // Show next button regardless of answer correctness
+            nextButton.style.display = 'block';
         }
         
         // Event Listeners

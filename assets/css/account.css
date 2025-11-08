@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    display: flex; /* Enables Flexbox layout for easy centering */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Sets height to 100% of the viewport (responsive) */
+    margin: 0; /* Removes default browser margin */
+    background-color: #efe9f4; /* Light grayish magneta background for visibility */
+}
+
+.account-container {
+
+}
+
+.account-container img{
+    width: 150px;
+    height: auto;
+    margin-bottom: -20px;
+}
