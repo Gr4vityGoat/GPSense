@@ -51,13 +51,13 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         }
 
         .option.correct {
-            background: #4CAF50 !important;
+            background: #98ce00 !important;
             color: white !important;
-            border-color: #45a049 !important;
+            border-color: #c3e75eff !important;
         }
 
         .option.incorrect {
-            background: #ab261d !important;
+            background: #b02e0c !important;
             color: white !important;
             border-color: #d0433f !important;
         }

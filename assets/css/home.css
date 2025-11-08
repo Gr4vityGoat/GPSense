@@ -115,3 +115,10 @@ body {
 .question_box button:hover {
       background-color: #d0433f;
 }
+.question-image {
+    width: 100%;             /* scales image to fit the container */
+    max-width: 350px;        /* limit image size */
+    height: auto;            /* keep correct proportions */
+    border-radius: 10px;     /* matches style */
+    margin-bottom: 15px;     /* space between image and text */
+}
