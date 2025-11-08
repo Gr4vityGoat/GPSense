@@ -40,6 +40,22 @@ body {
   gap: 30px !important; /* spaces each option evenly */
 }
 
+/* Space out answer options clearly */
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px !important;  /* evenly spaces each option */
+}
+
+.option {
+  display: block;
+  width: 80%;
+  margin: 0 !important;  /* clear old margin rules */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
 .option h2 {
       color: #14213d;
       font-family: 'Agrandir', sans-serif;
