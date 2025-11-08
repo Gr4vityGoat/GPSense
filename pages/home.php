@@ -103,10 +103,18 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
                 // Handle the image
                 const imageElement = document.getElementById('questionImage');
                 if (currentQuestion.photo_url) {
-                    imageElement.src = '/assets/' + currentQuestion.photo_url;
-                    imageElement.style.display = 'block';
+                imageElement.src = '/' + currentQuestion.photo_url;
+                imageElement.style.display = 'block';
+    
+                // Always enforce consistent sizing
+                imageElement.style.maxWidth = '320px';
+                imageElement.style.maxHeight = '320px';
+                imageElement.style.width = 'auto';
+                imageElement.style.height = 'auto';
+                imageElement.style.objectFit = 'contain';
+                imageElement.style.margin = '0 auto 15px';
                 } else {
-                    imageElement.style.display = 'none';
+                imageElement.style.display = 'none';
                 }
                 
                 // Create the options
