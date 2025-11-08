@@ -35,6 +35,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=agrandir@400,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -46,6 +47,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         .option {
             cursor: pointer;
             transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
         }
 
         .option:hover {
