@@ -33,7 +33,12 @@ body {
       background-color: #263d6f;
       transform: scale(1.02);
 }
-
+#optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* spaces each option evenly */
+}
 
 .option h2 {
       color: #14213d;
