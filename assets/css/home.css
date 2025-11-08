@@ -63,6 +63,8 @@ body {
       font-weight: bold;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
+      width: 50%; 
+      margin: 0 auto;
 }
 
 .question-box button:hover {
@@ -93,7 +95,7 @@ body {
 .navigation_buttons:hover {
             transform: translateY(-2px);
         }
-        
+
 .question_box {
       background-color: #b8d8d8;
       padding: 30px;
