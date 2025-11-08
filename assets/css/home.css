@@ -76,7 +76,7 @@ body {
   position: absolute;
   top: 30px;                /* distance from top of screen */
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   display: flex;
   justify-content: center;
   gap: 20px;
