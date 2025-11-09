@@ -33,6 +33,7 @@ body {
 .option:hover {
       background-color: #263d6f;
       transform: scale(1.02);
+      transform: translateY(-2px);
 }
 #optionsContainer {
   display: flex;
@@ -91,6 +92,8 @@ body {
 
 .question-box button:hover {
       background-color: #c0d0d0;
+      transform: scale(1.02);
+      transform: translateY(-2px);
 }
 
 /* Create a top header area */
@@ -121,6 +124,8 @@ body {
 
 .navigation_buttons button:hover {
   background-color: #729ecd;
+  transform: scale(1.02);
+      transform: translateY(-2px);
 }
 
 .question_box {
