@@ -94,13 +94,14 @@ body {
 
 /* Create a top header area */
 .navigation_buttons {
-  position: absolute;
-  top: 30px;                /* distance from top of screen */
-  left: 50%;
-  /* transform: translateX(-50%); */
+  position: static;              /* let it flow naturally */
   display: flex;
-  justify-content: center;
+  justify-content: center;       /* center horizontally */
   gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;           /* space between nav and quiz box */
+  width: 100%;
+  z-index: 2;                    /* keep it above the question box */
 }
 
 /* Make buttons attractive and consistent */
@@ -135,7 +136,7 @@ body {
       border-width: 5px;
       border-radius: 20px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      width: 400px; #14213d
+      width: 400px; 
       text-align: center;
 }
 .question_box h2 {
