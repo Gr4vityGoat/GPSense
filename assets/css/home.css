@@ -212,3 +212,20 @@ body {
   margin: 0 auto 15px;      /* center + gap under image */
   border-radius: 10px;
 }
+/* Question text uses Agrandir */
+.question-box h2,
+#question-text {
+  font-family: 'Agrandir', sans-serif;
+  font-weight: 600; /* or 700 if you want it bolder */
+}
+
+/* Everything else uses Poppins */
+body,
+button,
+.navigation_buttons button,
+.option-button,
+#next-question-btn,
+#feedback {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
