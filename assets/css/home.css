@@ -1,17 +1,18 @@
 body {
-      font-family: Arial, sans-serif;
-      background-color: #efe9f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #efe9f4;
+  display: flex;
+  flex-direction: column;  /* stack nav and quiz vertically */
+  align-items: center;     /* center horizontally */
+  min-height: 100vh;
+  margin: 0;
 }
 .main-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;        /* space below nav */
+  width: 100%;
 }
 .option {
       background-color: #14213d;
@@ -94,14 +95,11 @@ body {
 
 /* Create a top header area */
 .navigation_buttons {
-  position: static;              /* let it flow naturally */
   display: flex;
-  justify-content: center;       /* center horizontally */
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;               /* spacing between buttons */
   margin-top: 20px;
-  margin-bottom: 40px;           /* space between nav and quiz box */
-  width: 100%;
-  z-index: 2;                    /* keep it above the question box */
 }
 
 /* Make buttons attractive and consistent */
@@ -111,10 +109,6 @@ body {
   color: #efe9f4;
   border: 4px solid #729ecd;
   border-radius: 9px;
-  margin-bottom: 40px;
-  z-index: 2;
-  position: relative;
-  justify-content: flex-start;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -123,9 +117,9 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .navigation_buttons button:hover {
   background-color: #729ecd;
-  transform: none;
 }
 
 .question_box {

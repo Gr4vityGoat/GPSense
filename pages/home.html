@@ -9,16 +9,30 @@
   <link rel="stylesheet" href="/assets/css/home.css" />
 </head>
 <body>
-  <div id="questionText"></div>
-  <div class="question-box">
-    <h2 id="question-text">Loading question...</h2>
-    <form id="question-form">
-      <div id="options-container"></div>
-      <input type="hidden" name="question_id" id="question-id" />
-      <button type="submit">Submit Answer</button>
+  <!-- Navigation Buttons -->
+  <div class="navigation_buttons">
+    <form action="home.php" method="get" style="display:inline;">
+      <button type="submit">Take Quiz</button>
     </form>
-    <div id="feedback"></div>
+    <form action="account.php" method="get" style="display:inline;">
+      <button type="submit">My Account</button>
+    </form>
   </div>
+
+  <!-- Main Container for Quiz -->
+  <div class="main-container">
+    <div class="question-box">
+      <h2 id="question-text">Loading question...</h2>
+      <form id="question-form">
+        <div id="options-container"></div>
+        <input type="hidden" name="question_id" id="question-id" />
+        <button type="submit">Submit Answer</button>
+      </form>
+      <div id="feedback"></div>
+    </div>
+  </div>
+
   <script>
-    fetch
+    // your JS here
   </script>
+</body>
