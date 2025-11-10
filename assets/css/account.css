@@ -84,10 +84,8 @@ button:hover {
 }
 
 h3 {
-    margin-top: 25px;
+    margin-top: 10px;
     color: #ab261d;
     font-size: 1rem;
     text-align: center;
-
-    padding-top: 15px;          /* Space between line and text */
 }
