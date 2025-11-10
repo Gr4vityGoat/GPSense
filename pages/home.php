@@ -26,6 +26,7 @@ if (!$question) {
 
 // Return question data as JSON if it's an AJAX request
 if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
+    $question['photo_url'] = trim($question['photo_url'] ?? '');
     header('Content-Type: application/json');
     echo json_encode($question);
     exit;
@@ -35,6 +36,9 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=agrandir@400,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPSense Quiz</title>
@@ -44,6 +48,10 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         .option {
             cursor: pointer;
             transition: all 0.3s ease;
+            color: #b8d8d8; 
+            font-family: 'Poppins', sans-serif;
+            width: 50%; 
+            margin: 0 auto;
         }
 
         .option:hover {
@@ -51,13 +59,13 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
         }
 
         .option.correct {
-            background: #4CAF50 !important;
+            background: #98ce00 !important;
             color: white !important;
-            border-color: #45a049 !important;
+            border-color: #c3e75eff !important;
         }
 
         .option.incorrect {
-            background: #ab261d !important;
+            background: #b02e0c !important;
             color: white !important;
             border-color: #d0433f !important;
         }
@@ -103,10 +111,18 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
                 // Handle the image
                 const imageElement = document.getElementById('questionImage');
                 if (currentQuestion.photo_url) {
-                    imageElement.src = '/assets/' + currentQuestion.photo_url;
-                    imageElement.style.display = 'block';
+                imageElement.src = '/' + currentQuestion.photo_url;
+                imageElement.style.display = 'block';
+    
+                // Always enforce consistent sizing
+                imageElement.style.maxWidth = '320px';
+                imageElement.style.maxHeight = '320px';
+                imageElement.style.width = 'auto';
+                imageElement.style.height = 'auto';
+                imageElement.style.objectFit = 'contain';
+                imageElement.style.margin = '0 auto 15px';
                 } else {
-                    imageElement.style.display = 'none';
+                imageElement.style.display = 'none';
                 }
                 
                 // Create the options
@@ -159,16 +175,14 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             });
             
             // Show feedback
-            feedback.textContent = isCorrect  
-                 ? `✅ Correct! ${currentQuestion.answer_reason}` 
-                 : `❌ Incorrect. ${currentQuestion.answer_reason}`;
+            feedback.textContent = isCorrect ? 
+                '✅ Correct!' : 
+                `❌ Incorrect. ${currentQuestion.answer_reason}`;
             feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
             feedback.style.display = 'block';
             
-            // Show next button
-            if (isCorrect) {
-                nextButton.style.display = 'block';
-            }
+            // Show next button regardless of answer correctness
+            nextButton.style.display = 'block';
         }
         
         // Event Listeners
