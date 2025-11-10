@@ -37,5 +37,7 @@ $correct_text = $question['option_' . $correct];
     <p><strong>Explanation:</strong> <?php echo htmlspecialchars($reason); ?></p>
     <a href="home.php">Next Question</a>
   </main>
+  <!-- Footer Include -->
+  <?php include(__DIR__ . '/../includes/footer.php') ?>
 </body>
 </html>
