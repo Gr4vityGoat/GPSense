@@ -17,7 +17,7 @@ body {
   width: 100%;
 }
 .option {
-      background-color: #14213d;
+      background-color: #001931;
       padding: 15px 20px;
       border-style: solid;
       border-color: #263d6f;
@@ -186,7 +186,7 @@ body {
 }
 
 .question_box button:hover {
-      background-color: #d0433f;
+      background-color: #ab261d;
 }
 .question-image {
     width: 100%;             /* scales image to fit the container */
