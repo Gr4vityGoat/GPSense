@@ -28,16 +28,18 @@ body {
 
 .back-arrow {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 20px;
   text-decoration: none;
   font-size: 24px;
   color: #333;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover animation */
 }
 
 .back-arrow:hover {
-  color: #001931; /* Optional: adds hover effect */
+  color: #263d6f;
+  transform: scale(1.05);
 }
 
 .account-container {

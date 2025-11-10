@@ -71,6 +71,10 @@ if (isset($_SESSION['update_success'])) {
   <form action="home.php" method="GET">
     <button type="submit">Back to Home</button>
   </form>
+
+  <form action="logout.php" method="POST">
+    <button type="submit">Sign Out</button>
+  </form>
   <!-- Footer Include -->
   <?php include(__DIR__ . '/../includes/footer.php') ?>
 </body>
