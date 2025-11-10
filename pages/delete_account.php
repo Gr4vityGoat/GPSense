@@ -16,6 +16,6 @@ $stmt->execute();
 $_SESSION['account_deleted'] = true;
 session_destroy();
 
-header("Location: index.html");
+header("Location: /index.html");
 exit;
 ?>
