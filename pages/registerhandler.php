@@ -1,5 +1,6 @@
 <?php
 session_start();
+// include DB connection using __DIR__ so the path is correct when deployed
 include __DIR__ . '/../includes/mysqli_connect.php';
 
 // Get and sanitize input
