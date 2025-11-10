@@ -1,35 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 body {
-    display: flex; /* Enables Flexbox layout for easy centering */
-    justify-content: center; /* Horizontally centers the content */
-    height: 100vh; /* Sets height to 100% of the viewport (responsive) */
-    margin: 0; /* Removes default browser margin */
-    background-color: #efe9f4; /* Light grayish magneta background for visibility */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #efe9f4;
+    font-family: "Open Sans", sans-serif;
 }
 
 .title-container {
     background-color: white;
+    width: 100%;
+    padding: 15px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .title-container h1 {
-    color: #001931; /* Deep navy blue */
-    font-family: "Open Sans", sans-serif;
-    text-decoration: solid;
+    color: #001931;
+    font-family: "Poppins", sans-serif; /* swapped in */
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .account-container {
     width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .account-container img {
-    width: 50px;
-    height: auto;
-    margin-bottom: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-.account-container h1 {
-    font-family: 'Poppins', sans-serif;
+.account-container h2 {
+    font-family: "Poppins", sans-serif; /* consistent with title */
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #444;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #001931;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #b00020;
+    font-size: 1rem;
+    text-align: center;
 }
