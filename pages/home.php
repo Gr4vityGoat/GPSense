@@ -201,5 +201,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'get_question') {
             document.getElementById('nextButton').addEventListener('click', loadQuestion);
         });
     </script>
+    <!-- Footer Include -->
+    <?php include(__DIR__ . '/../includes/footer.php') ?>
 </body>
 </html>

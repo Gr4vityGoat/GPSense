@@ -37,6 +37,7 @@ if (isset($_SESSION['update_success'])) {
 }
 ?>
   <div class="title-container">
+    <a href="home.php" class="back-arrow">&#8592; Back</a>
     <h1>👤 Account Settings</h1>
   </div>
 
@@ -69,10 +70,6 @@ if (isset($_SESSION['update_success'])) {
 
   <form action="home.php" method="GET">
     <button type="submit">Back to Home</button>
-  </form>
-
-  <form action="logout.php" method="POST">
-    <button type="submit">Sign Out</button>
   </form>
   <!-- Footer Include -->
   <?php include(__DIR__ . '/../includes/footer.php') ?>
