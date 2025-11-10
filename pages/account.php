@@ -68,10 +68,6 @@ if (isset($_SESSION['update_success'])) {
     <button type="submit" name="confirm_delete" value="yes" style="color:red;">Delete My Account</button>
   </form>
 
-  <form action="home.php" method="GET">
-    <button type="submit">Back to Home</button>
-  </form>
-
   <form action="logout.php" method="POST">
     <button type="submit">Sign Out</button>
   </form>
