@@ -16,10 +16,16 @@ $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 ?>
 
-<!DOCTYPE html>
-<html>
+
+</body>
+<<!DOCTYPE html> <!-- Declaration -->
+<html lang="en"> <!-- Root Element -->
 <head>
-  <title>Account Settings</title>
+  <meta charset="UTF-8"> <!-- Character set (supports most characters and symbols) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Standard viewport (sets the width of the page to follow the screen-width of the device with initial zoom level) -->
+    <title>Account Settings</title>
+
+    <link rel="stylesheet" href="/assets/css/account.css">
 </head>
 <body>
 <?php
@@ -30,8 +36,9 @@ if (isset($_SESSION['update_success'])) {
     unset($_SESSION['update_success']);
 }
 ?>
-  <h1><span class="icon">👤</span>Account Settings</h1>
-    <img src="/assets/images/blank_profile.jpeg" alt="Profile Picture" class="profile-picture">
+  <div class="title-container">
+    <h1><span class="icon">👤 </span>Account Settings</h1>
+      <img src="/assets/images/blank_profile.jpeg" alt="Profile Picture" class="profile-picture">
   <?php
   // Welcome message to user
   echo "<h2>".$_SESSION['username'] ."</h2>";
