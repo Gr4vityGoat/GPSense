@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #efe9f4;
   display: flex;
   flex-direction: column;  /* stack nav and quiz vertically */
@@ -60,7 +62,7 @@ body {
 
 .option h2 {
       color: #14213d;
-      font-family: 'Agrandir', sans-serif;
+      font-family: "Open Sans", sans-serif;
 }
 
 .question-box form {
@@ -142,16 +144,12 @@ body {
       margin-bottom: 25px; 
 }
 .question_box h2 {
-<<<<<<< HEAD
       color: #001931;
-=======
-      color: #b8d8d8;
->>>>>>> 888a6707486e64bf083e0e1a7af50d737ae68abe
-      font-family: 'Agrandir', sans-serif;
+      font-family: "Open Sans", sans-serif;
 }
 #questionText {
       color:#14213d;
-      font-family: 'Agrandir', sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-size: 1.2rem;
       font-weight:600;
       margin-bottom: 25px;
@@ -219,7 +217,7 @@ body {
 /* Question text uses Agrandir */
 .question-box h2,
 #question-text {
-  font-family: 'Agrandir', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600; /* or 700 if you want it bolder */
 }
 

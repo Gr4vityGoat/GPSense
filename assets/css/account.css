@@ -11,6 +11,7 @@ body {
 
 .title-container {
     background-color: white;
+    text-align: center;
 }
 
 .title-container h1 {
@@ -20,15 +21,15 @@ body {
 }
 
 .account-container {
-
+    width: 100%;
 }
 
 .account-container img {
-    width: 150px;
+    width: 50px;
     height: auto;
     margin-bottom: -20px;
 }
 
-h2 {
-    font-family: ;
+.account-container h1 {
+    font-family: 'Poppins', sans-serif;
 }

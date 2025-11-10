@@ -37,11 +37,14 @@ if (isset($_SESSION['update_success'])) {
 }
 ?>
   <div class="title-container">
-    <h1><span class="icon">👤 </span>Account Settings</h1>
+    <h1><👤 Account Settings</h1>
+  </div>
+  <div class="account-container">
       <img src="/assets/images/blank_profile.jpeg" alt="Profile Picture" class="profile-picture">
+
   <?php
   // Welcome message to user
-  echo "<h2>".$_SESSION['username'] ."</h2>";
+  echo "<h2>".$_SESSION['username'] ."</h2></div>";
   ?>
   <form action="update_account.php" method="POST">
     <label>Username:</label>
