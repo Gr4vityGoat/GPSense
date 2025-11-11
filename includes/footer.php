@@ -16,7 +16,7 @@
     
 <body>
    <footer>
-          &copy; 2025
+          GPSense, &copy; 2025
    </footer>
 </body>
 </html>
