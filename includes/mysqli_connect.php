@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$db_user = "infost490fa2507_ryan";
-$db_pass = "BloodClotGPS01";
+$db_user = "root";
+$db_pass = "";
 $db_name = "gpsense";
 
 $mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
